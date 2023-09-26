@@ -57,7 +57,6 @@ export const useAuthStore = defineStore('auth', () => {
         response.data.access_token.token
       ) {
         clearAuthErrs();
-        //this is not a best approach but my API doesn't support some features (refresh token etc)
         localStorage.setItem('accessToken', response.data.access_token.token)
         localStorage.setItem('userData',JSON.stringify(response.data))
 
